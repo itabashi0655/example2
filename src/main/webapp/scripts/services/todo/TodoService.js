@@ -30,7 +30,11 @@ var Service;
             };
 
             TodoService.prototype.getList = function () {
-                var promise = this.$http.get('api/todo/list');
+                var promise = this.$http({
+                    method: 'GET',
+                    url: 'api/todo/list',
+                    cache: false
+                });
 
                 var wrappedPromise = {
                     success: function (callback) {
@@ -39,6 +43,7 @@ var Service;
                             data.forEach(function (todo) {
                                 readTodos.push(new Model.Todo(todo));
                             });
+
                             callback(readTodos, status, headers, config);
                         });
                         return wrappedPromise;
