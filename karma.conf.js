@@ -59,7 +59,7 @@ reporters = ['progress', 'junit'];
 
 
 // web server port
-port = 8080;
+port = 8081;
 
 
 // cli runner port
