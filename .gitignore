@@ -13,15 +13,15 @@ src/test/typescripts/libs/
 
 src/test/resources/typescript/data/
 
-src/main/webapp/css
+#src/main/webapp/css
 
-src/main/webapp/scripts/*.js
-src/main/webapp/scripts/**/*.js
-src/main/webapp/scripts/*.js.map
-src/main/webapp/scripts/*.d.ts
+#src/main/webapp/scripts/*.js
+#src/main/webapp/scripts/**/*.js
+#src/main/webapp/scripts/*.js.map
+#src/main/webapp/scripts/*.d.ts
 
 # bower generated
-src/main/webapp/scripts/libs/*
+#src/main/webapp/scripts/libs/*
 
 # tsd generated
 src/main/typescripts/libs/DefinitelyTyped
