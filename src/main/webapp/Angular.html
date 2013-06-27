@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="example2.todo">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script type="text/javascript" src="scripts/libs/jquery/jquery.js"></script>
+		<script type="text/javascript" src="scripts/libs/jquery/jquery-ui.js"></script>
+		<script type="text/javascript" src="scripts/libs/fullcalendar/fullcalendar.js"></script>
+		<script type="text/javascript" src="scripts/libs/fullcalendar/gcal.js"></script>
+		<script type="text/javascript" src="scripts/libs/angular/angular.js"></script>
+		<script type="text/javascript" src="scripts/libs/angular-ui-calendar/calendar.js"></script>
+		<script type="text/javascript" src="scripts/models/todo/Todo.js"></script>
+		<script type="text/javascript" src="scripts/services/todo/TodoService.js"></script>
+		<script type="text/javascript" src="scripts/controllers/todo/TodoController.js"></script>
+		<script type="text/javascript" src="scripts/modules/Todo.js"></script>
+
+ 		<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+		<style>
+		<!--
+		li.todo {
+		    background: -moz-linear-gradient(top,#FFF 0%,#EEE);
+		    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+		    border: 1px solid #DDD;
+		    border-radius: 4px;
+		    -moz-border-radius: 4px;
+		    -webkit-border-radius: 4px;
+			-moz-box-shadow: 1px 1px 1px rgba(000,000,000,0.3);
+		    -webkit-box-shadow: 1px 1px 1px rgba(000,000,000,0.3);
+		    color: #111;
+		    width: 80%;
+		    padding: 10px 0;
+			list-style-type: none;
+		}
+		-->
+		</style>
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"/>
+		<link href="scripts/libs/fullcalendar/fullcalendar.css" rel="stylesheet"/>
+
+		<title>Angular</title>
+	</head>
+	<body>
+		<div class="container" id="main" ng-controller="TodoController" >
+			<div class="row">
+				<div class="span12">
+					<h2>Hello I am Backbone !!!</h2>
+					<div id="console" style="margin:5px">
+						<textarea class="span8" id="add-content" ng-model="newTodo.content" ></textarea>
+						<input type="text" disabled class="span3" id="status" />
+						<a class="btn btn-success" data-role="button" id="add-button" ng-click="onAdd()"><i class="icon-plus icon-white"></i>Add</a>
+					</div>
+					<ul id="todos" ng-repeat="todo in todos">
+						<li class="todo" style="padding:10px;">
+							<span>
+								<div style="font-size:10pt">{{todo.content}}</div>
+								<div style="font-size:9pt">{{todo.createdBy}}</div>
+							</span>
+							<span style="float:right">
+						        <a class="btn btn-danger delete-button" ng-click="onRemove($index)"><i class="icon-remove icon-white"></i>削除</a>
+							</span>
+							<div style="clear:both">
+						</li>
+					</ul>
+					<div style="padding:20px">
+						<div ui-calendar="calendarConfig" ng-model="eventSources" calendar="myCalendar">
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
