@@ -199,6 +199,7 @@ module.exports = function (grunt) {
 				]
 			},
 			clientScript: {
+				force : true, 
 				src: [
 					// client
 					'src/main/webapp/scripts/*.js',
