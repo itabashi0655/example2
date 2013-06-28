@@ -81,6 +81,7 @@ describe("Controllerの", () => {
             // 新規TODOの内容がクリアされていること
             expect($scope.newTodo.content)
                 .toBe('');
+
             expect($scope.newTodo.id)
                 .toBe(0);
             expect($scope.newTodo.createdBy)

@@ -138,9 +138,9 @@ module.exports = function (grunt) {
 						'src/main/webapp/scripts/libs/fullcalendar/gcal.js',
 						'src/main/webapp/scripts/libs/angular/angular.js',
 						'src/main/webapp/scripts/libs/angular-ui-calendar/calendar.js',
-						'src/main/webapp/scripts/models/*.js',
-						'src/main/webapp/scripts/controllers/*.js',
-						'src/main/webapp/scripts/services/*.js',
+						'src/main/webapp/scripts/models/todo/*.js',
+						'src/main/webapp/scripts/controllers/todo/*.js',
+						'src/main/webapp/scripts/services/todo/*.js',
 						'src/main/webapp/scripts/modules/*.js',
 						'src/main/webapp/scripts/*.js'
 					]
@@ -199,7 +199,9 @@ module.exports = function (grunt) {
 					'src/main/webapp/scripts/*.d.ts',
 					'src/main/webapp/scripts/*.js.map',
 					'src/main/webapp/scripts/models',
-					'src/main/webapp/scripts/views',
+					'src/main/webapp/scripts/modules',
+					'src/main/webapp/scripts/services',
+					'src/main/webapp/scripts/controllers',
 					// client test
 					'src/test/typescripts/*.js',
 					'src/test/typescripts/*.js.map',
