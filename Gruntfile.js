@@ -155,11 +155,17 @@ module.exports = function (grunt) {
 				},
 				files: {
 					'src/main/webapp/scripts/main.min.js': [
-						'src/main/webapp/scripts/libs/jquery/jquery.js',
-						'src/main/webapp/scripts/libs/angular/angular.js',
-						'src/main/webapp/scripts/models/*.js',
-						'src/main/webapp/scripts/views/*.js',
-						'src/main/webapp/scripts/*.js'
+					'src/main/webapp/scripts/libs/jquery/jquery.js',
+					'src/main/webapp/scripts/libs/jquery/jquery-ui.js',
+					'src/main/webapp/scripts/libs/fullcalendar/fullcalendar.js',
+					'src/main/webapp/scripts/libs/fullcalendar/gcal.js',
+					'src/main/webapp/scripts/libs/angular/angular.js',
+					'src/main/webapp/scripts/libs/angular-ui-calendar/calendar.js',
+					'src/main/webapp/scripts/models/todo/*.js',
+					'src/main/webapp/scripts/controllers/todo/*.js',
+					'src/main/webapp/scripts/services/todo/*.js',
+					'src/main/webapp/scripts/modules/*.js',
+					'src/main/webapp/scripts/*.js'
 					]
 				}
 			}
@@ -283,7 +289,8 @@ module.exports = function (grunt) {
 	grunt.registerTask(
 		'prod',
 		"デプロイ用の環境を整える",
-		['clean:clientCss', 'clean:clientScript', 'typescript:main', 'compass:dev', 'uglify:prod']);
+		['clean:clientCss', 'clean:clientScript', 'typescript:main', 'uglify:prod']);
+//		['clean:clientCss', 'clean:clientScript', 'typescript:main', 'compass:dev', 'uglify:prod']);
 
 	grunt.registerTask(
 		'test',
