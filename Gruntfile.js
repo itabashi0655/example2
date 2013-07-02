@@ -226,6 +226,7 @@ module.exports = function (grunt) {
 				]
 			},
 			bower: {
+				force: true,
 				src: [
 					// bower installed
 					'src/main/webapp/scripts/libs',
