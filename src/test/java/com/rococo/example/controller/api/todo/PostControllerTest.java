@@ -26,12 +26,12 @@ public class PostControllerTest extends ControllerTestCase {
 		env.setEmail("loginuser@example.com");
 		
 		// create test data.
-		Entity entity1 = new Entity(Datastore.createKey("ToDo", 1));
+		Entity entity1 = new Entity(Datastore.createKey("Todo", 1));
 		entity1.setProperty("title", "ToDo1");
 		entity1.setProperty("createdBy", "loginuser@example.com");
 		entity1.setProperty("createdAt", new Date());
 
-		Entity entity2 = new Entity(Datastore.createKey("ToDo", 2));
+		Entity entity2 = new Entity(Datastore.createKey("Todo", 2));
 		entity2.setProperty("title", "ToDo2");
 		entity2.setProperty("createdBy", "anotheruser@example.com");
 		entity2.setProperty("createdAt", new Date());
